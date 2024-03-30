@@ -1,8 +1,6 @@
 const dotenv = require("dotenv").config();
 const express = require("express");
 const cookieParser = require("cookie-parser");
-// const dataRoutes = require("./routes/dataRoutes");
-// const errorHandler = require("./middlewares/errorMiddleware");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 5000;
@@ -14,7 +12,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 // ERROR MIDDLEWARE
-// app.use(errorHandler);
 app.use(
   cors({
     origin: process.env.ORIGIN,
@@ -23,8 +20,7 @@ app.use(
   })
 );
 
-// Routes
-// app.use("/api/data", dataRoutes);
+
 const cityData = [
   {
     name: "Yapkashnagar",
